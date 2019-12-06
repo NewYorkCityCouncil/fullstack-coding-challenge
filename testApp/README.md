@@ -4,7 +4,7 @@ Prereqs:
 
 Setup:
 1) Create a virtual environment setup(This can be created in any dir, it also doesn't have to be named venv):
-  a) run: virtualenv -python=`which python3` venv
+  a) run: python3 -m venv venv
 2) Activate the virtual enviroment:
   a) run: source [path to virtual enviorment]/bin/activate
   b) You should now see your virual enviroment in parentheses ex: (venv)
