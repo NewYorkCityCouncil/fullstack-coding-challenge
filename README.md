@@ -1,5 +1,5 @@
 # New York City Council Full Stack Coding Challenge
-You will have 1 full week to complete this challenge starting when you received the challenge from our office.
+You will have **1 full week** to complete this challenge starting when you received the challenge from our office. You can submit your challenge using our [Google Form](https://forms.gle/HXCXFiVvFAJ3WzAc7).
 
 If you have any questions regarding the code or the tasks, please submit a [new issue](https://github.com/NewYorkCityCouncil/fullstack-coding-challenge/issues/new) and we will review it as soon as we can.
 
@@ -23,8 +23,8 @@ We’ve set up some starter code for you to use. For this challenge you will be 
 3. Single digit districts numbers are padded by a zero in the Complaint table, **BUT** single digit district numbers in the UserProfile table are **NOT** padded by a zero. You will need to take this into consideration when writing your code.
 
 ## How to Start
-1. Start by forking our [Github repository](https://github.com/NewYorkCityCouncil/fullstack-coding-challenge) that contains the starter code.
-2. Make sure your forked repository is **public** so the team can access and review the code.
+1. Start by **cloning** this [Github repository](https://github.com/NewYorkCityCouncil/fullstack-coding-challenge) to download the starter code.
+2. Make sure your repository is **public** so the team can access and review the code.
 3. Make sure you have python (**version 3.6 or greater**) and node installed.
 4. Inside the main directory (`fullstack-coding-challenge/testApp`), run the following commands to install your dependencies and set up your database:
     - `pip install -r requirements.txt` (you can do this in a virtual environment like venv or anaconda if you’d like)
@@ -46,14 +46,14 @@ We’ve set up some starter code for you to use. For this challenge you will be 
 | `/api/complaints/closedCases/` | GET | Returns **all closed complaints** |
 | `/api/complaints/topComplaints/` | GET | Returns **top 3 complaint types** |
 
-**NOTE**: All complain endpoints should return complaints that occur in the user's district. View the "Important things to know about the data" section for more clarification.
+**NOTE**: All complain endpoints should return complaints that occur in the user's district. View the "[Important things to know about the data](https://github.com/NewYorkCityCouncil/fullstack-coding-challenge#important-things-to-know-about-the-data)" section for more clarification.
 
 ## MVP
 ### The Django Side ([Django Documentation](https://docs.djangoproject.com/en/2.2/))
 1. Fill in the empty viewsets with database queries that the frontend is requesting (see React MVP #2) (`fullstack-coding-challenge/testApp/complaint_app/views.py`) ([Django REST framework viewset documentation](https://www.django-rest-framework.org/api-guide/viewsets/))
 
 ### The React Side ([React Documentation](https://reactjs.org/docs/getting-started.html))
-1. Create a simple login page for Council members to input their credentials (see above in the ‘What we’re providing’ section for the format)
+1. Create a simple login page for Council members to input their credentials (see above in the ‘[What we’re providing](https://github.com/NewYorkCityCouncil/fullstack-coding-challenge#what-were-providing)’ section for the format)
 2. Create simple dashboard page that displays the following information:
     - The number of open cases in their district (has an open date, but no closing date)
     - The number of closed cases in their district
@@ -61,9 +61,9 @@ We’ve set up some starter code for you to use. For this challenge you will be 
     - Tabular data of all complaints made in their district
 
 ## BONUS POINTS
-### Django
+### The Django Side
 1. Create new endpoint and viewset that should return all complaints that were made by constituents that live in the logged in council member’s district. *(i.e., John Doe is the Council Member for District 1, and he clicks on the new button. His dashboard table now only shows complaints where `conucil_dist` is `NYCC01`).*
 2. Update the UserProfile serializer to flatten the User object to reduce calls to the database.
 
-### React
+### The React Side
 Create a button labelled “Complaints by My Constituents”. This button will trigger a GET request to a different endpoint than what you’ve been using for the MVP. The data return from this endpoint should replace the data in the table.
