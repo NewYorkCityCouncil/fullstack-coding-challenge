@@ -31,6 +31,7 @@ We’ve set up some starter code for you to use. For this challenge you will be 
 
 ## The API endpoints
 `localhost:8000`
+
 | Route | Method | Description |
 | ----- | ------ | ----------- |
 | `/admin` | GET | Log in for superusers into the Django admin portal |
