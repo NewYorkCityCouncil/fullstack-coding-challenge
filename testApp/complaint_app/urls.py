@@ -1,6 +1,6 @@
 from django.urls import path
 from rest_framework import routers
-from .views import *
+from .views import ComplaintViewSet, OpenCasesViewSet, ClosedCasesViewSet, TopComplaintTypeViewSet
 
 router = routers.SimpleRouter()
 router.register(r'', ComplaintViewSet, base_name='complaint')

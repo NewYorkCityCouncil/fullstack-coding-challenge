@@ -1,6 +1,6 @@
 from django.core.management.base import BaseCommand, CommandError
 from django.contrib.auth.models import User
-from complaint_app.models import *
+from complaint_app.models import UserProfile, Complaint
 import os.path
 import json
 
