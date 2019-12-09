@@ -1,5 +1,6 @@
 # New York City Council Full Stack Coding Challenge
 You will have 1 full week to complete this challenge starting when you received the challenge from our office.
+
 If you have any questions regarding the code or the tasks, please submit a [new issue](https://github.com/NewYorkCityCouncil/fullstack-coding-challenge/issues/new) and we will review it as soon as we can.
 
 ## The Task
