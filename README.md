@@ -14,8 +14,9 @@ We’ve set up some starter code for you to use. For this challenge you will be 
 - Empty methods/views and serializers for the endpoints that you will use on the React side.
 
 ## Important things to know about the data
-1. The fields `account` and `council_dist` both refer to a council district. However, `account` refers to the district in which the complaint is being made, and `council_dist` refers to the district in which the person who is making the complaint lives. *(i.e., John Doe is the Council Member for District 1, if a noise complaint labels ACCOUNT as NYCC01 and COUNCIL_DIST as NYCC34, that means the complaint is being made in his district, but the person who filed the complaint lives in district 34).*
+1. The fields `account` and `council_dist` both refer to a council district. However, `account` refers to the district in which the complaint is being made, and `council_dist` refers to the district in which the person who is making the complaint lives. *(i.e., John Doe is the Council Member for **District 1**, if a noise complaint labels `account` as `NYCC01` and `council_dist` as `NYCC34`, that means the complaint is being made in his district 1, by a person who lives in district 34).*
 2. All of the data are string data types except for the open and close dates. In addition, the data is **NOT** entirely clean; some fields will be empty strings or NULL.
+3. Single digit districts numbers are padded by a zero in the Complaint table, **BUT** single digit district numbers in the UserProfile table are **NOT** padded by a zero. You will need to take this into consideration when writing your code.
 
 ## How to Start
 1. Start by forking our [Github repository](https://github.com/NewYorkCityCouncil/fullstack-coding-challenge) that contains the starter code.
@@ -34,12 +35,12 @@ We’ve set up some starter code for you to use. For this challenge you will be 
 
 | Route | Method | Description |
 | ----- | ------ | ----------- |
-| `/admin` | GET | Log in for superusers into the Django admin portal |
+| `/admin/` | GET | Log in for superusers into the Django admin portal |
 | `/login/` | POST | Accepts username and password and returns a **token**. Use this **token** to authorize use of other endpoints. View the [documentation](https://www.django-rest-framework.org/api-guide/authentication/#basicauthentication) |
-| `/api/complaints` | GET | Returns **all complaints** |
-| `/api/complaints/openCases` | GET | Returns **all open complaints** |
-| `/api/complaints/closedCases` | GET | Returns **all closed complaints** |
-| `/api/complaints/topComplaints` | GET | Returns **top 3 complaint types** |
+| `/api/complaints/` | GET | Returns **all complaints** |
+| `/api/complaints/openCases/` | GET | Returns **all open complaints** |
+| `/api/complaints/closedCases/` | GET | Returns **all closed complaints** |
+| `/api/complaints/topComplaints/` | GET | Returns **top 3 complaint types** |
 
 ## MVP
 ### The Django Side ([Django Documentation](https://docs.djangoproject.com/en/2.2/))
@@ -55,7 +56,7 @@ We’ve set up some starter code for you to use. For this challenge you will be 
 
 ## BONUS POINTS
 ### Django
-1. Create new endpoint and viewset that should return all complaints that were made by constituents that live in the logged in council member’s district. *(i.e., John Doe is the Council Member for District 1, and he clicks on the new button. His dashboard table now only shows complaints where COUNCIL_DIST is NYCC01).*
+1. Create new endpoint and viewset that should return all complaints that were made by constituents that live in the logged in council member’s district. *(i.e., John Doe is the Council Member for District 1, and he clicks on the new button. His dashboard table now only shows complaints where `conucil_dist` is `NYCC01`).*
 2. Update the UserProfile serializer to flatten the User object to reduce calls to the database.
 
 ### React
