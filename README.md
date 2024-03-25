@@ -23,7 +23,7 @@ We’ve set up some starter code for you to use. For this challenge you will be 
 ## How to Start
 1. Start by **cloning** this [Github repository](https://github.com/NewYorkCityCouncil/fullstack-coding-challenge) to download the starter code.
 2. Make sure your repository is **public** so the team can access and review the code.
-3. Make sure you have python (**version 3.6 or greater**) and node installed.
+3. Make sure you have python (**version 3.10 or greater**) and node installed.
 4. Inside the main directory (`fullstack-coding-challenge/testApp`), run the following commands to install your dependencies and set up your database:
     - `pip install -r requirements.txt` (you can do this in a virtual environment like venv or anaconda if you’d like)
     - `python manage.py migrate`

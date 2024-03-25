@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 class UserProfile(models.Model):
+  id = models.BigAutoField(primary_key=True)
   user = models.OneToOneField(User, on_delete=models.CASCADE)
   full_name = models.CharField(max_length=150, blank=True, default="")
   district = models.CharField(max_length=5, blank=True, default="")
@@ -13,6 +14,7 @@ class UserProfile(models.Model):
     return str(self.user)
     
 class Complaint(models.Model):
+  id = models.BigAutoField(primary_key=True)
   unique_key = models.CharField(max_length=150, blank=True, default="")
   account = models.CharField(max_length=10, blank=True, default="", null=True)
   opendate = models.DateField(blank=True, null=True)
