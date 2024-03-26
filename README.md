@@ -40,7 +40,7 @@ We’ve set up some starter code for you to use. For this challenge you will be 
 | ----- | ------ | ----------- |
 | `/admin/` | GET | Log in for superusers into the Django admin portal |
 | `/login/` | POST | Accepts username and password and returns a **token**. Use this **token** to authorize use of other endpoints. View the [documentation](https://www.django-rest-framework.org/api-guide/authentication/#basicauthentication) |
-| `/api/complaints/` | GET | Returns **all complaints** |
+| `/api/complaints/allComplaints` | GET | Returns **all complaints** |
 | `/api/complaints/openCases/` | GET | Returns **all open complaints** |
 | `/api/complaints/closedCases/` | GET | Returns **all closed complaints** |
 | `/api/complaints/topComplaints/` | GET | Returns **top 3 complaint types** |
